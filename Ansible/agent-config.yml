@@ -1,0 +1,9 @@
+aws_cw_logfiles
+ - path: /var/log/secure.log
+   timestamp_format: "%b %d %H:%M:%S"
+   log_group: "auth"
+   aws_cw_config_template_path: 'Cloudwatch-Config.json'
+   aws_cw_log_debug: true
+   aws_cw_agent_type: onPremise
+   aws_profie: AmazonCloudWatchAgent
+   aws_profile_path: '/tmp/credentials'
